@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页音乐播放器 - 25216950510黄俪</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="player-container">
+        <!-- 播放器标题与个人信息 -->
+        <div class="player-header">
+            <h1>我的音乐播放器</h1>
+            <p>学号：2025216950510 | 姓名：黄俪</p> 
+        </div>
+
+        <!-- 背景图展示 -->
+        <div class="album-cover" id="albumCover">
+            <img src="./images/record0.jpg" alt="专辑封面">
+        </div>
+
+        <!-- 音频核心组件（HTML5 Audio） -->
+        <audio id="audioPlayer" preload="metadata">
+            您的浏览器不支持音频播放，请更新浏览器！
+        </audio>
+
+        <!-- 歌曲信息展示 -->
+        <div class="song-info">
+            <h2 id="songTitle">未选择歌曲</h2>
+            <div class="progress-container">
+                <span id="currentTime">00:00</span>
+                <input type="range" id="progressBar" min="0" max="100" value="0" class="progress-bar">
+                <span id="totalTime">00:00</span>
+            </div>
+        </div>
+
+        <!-- 控制按钮区域 -->
+        <div class="control-buttons">
+            <!-- 上一首 -->
+            <button id="prevBtn" class="control-btn">
+                <img src="./images/上一首.png" alt="上一首" class="btn-icon">
+            </button>
+            <!-- 播放/暂停 -->
+            <button id="playPauseBtn" class="control-btn main-btn">
+                <img src="./images/继续播放.png" alt="播放" class="btn-icon main-icon" id="playPauseIcon">
+            </button>
+            <!-- 下一首 -->
+            <button id="nextBtn" class="control-btn">
+                <img src="./images/下一首.png" alt="下一首" class="btn-icon">
+            </button>
+            <!-- 音量 -->
+            <button id="volumeBtn" class="control-btn">
+                <img src="./images/音量.png" alt="音量" class="btn-icon" id="volumeIcon">
+            </button>
+            <!-- 播放列表 -->
+            <button id="listBtn" class="control-btn">
+                <img src="./images/列表.png" alt="列表" class="btn-icon">
+            </button>
+            <!-- 播放模式 -->
+            <button id="modeBtn" class="control-btn">
+                <img src="./images/mode1.png" alt="顺序播放" class="btn-icon" id="modeIcon">
+            </button>
+            <!-- MV播放 -->
+            <button id="mvBtn" class="control-btn">
+                <img src="./images/MV.png" alt="MV" class="btn-icon">
+            </button>
+        </div>
+
+        <!-- 播放列表区域 -->
+        <div class="playlist-container" id="playlistContainer">
+            <h3>播放列表</h3>
+            <ul id="playlist">
+                <!-- 歌曲列表将通过JS动态生成 -->
+            </ul>
+        </div>
+ <!-- MV播放弹窗 -->
+        <div class="mv-modal" id="mvModal">
+            <div class="mv-content">
+                <span class="close-mv">&times;</span>
+                <video id="mvPlayer" controls width="100%">
+                    您的浏览器不支持视频播放！
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
